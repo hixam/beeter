@@ -1,5 +1,6 @@
 package edu.upc.eetac.dsa.beeter.entity;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import org.glassfish.jersey.linking.InjectLinks;
 
 import javax.ws.rs.core.Link;
@@ -10,6 +11,7 @@ import java.util.List;
  * Created by hixam on 23/03/16.
  */
 public class StingCollection {
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     @InjectLinks({})
     private List<Link> links;
     private long newestTimestamp;
